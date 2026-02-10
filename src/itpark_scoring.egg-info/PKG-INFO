@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: itpark-scoring
+Version: 0.1.0
+Summary: IT Park company scoring tool (hybrid, local app)
+License: Proprietary
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: PySide6>=6.6
+Requires-Dist: requests>=2.31
+Requires-Dist: beautifulsoup4>=4.12
+Requires-Dist: lxml>=5.1
+Requires-Dist: openpyxl>=3.1
+Requires-Dist: fpdf2>=2.7
+Requires-Dist: openai>=1.40
+
+# IT Park Company Scoring (AI-Only MVP)
+
+This is a local desktop app that accepts a company name, collects **public web data**, and produces a **scorecard + PDF/CSV/Excel** using an LLM. The API key is **required** and **not** stored. Users can select which criteria to include.
+
+## What this does
+- Collects public info (company website, public pages, review sites, job postings, news mentions).
+- Extracts structured signals and scores companies using an LLM with coverage + confidence.
+- Exports PDF/CSV/Excel.
+
+## What this does NOT do
+- It does **not** scrape sites that forbid automation (e.g., LinkedIn/Apollo). If you want that data, add manual inputs or approved APIs.
+- It does **not** store API keys.
+
+## Quick start (dev)
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+python -m itpark_scoring.app
+```
+
+## Windows .exe build (PyInstaller)
+```bash
+pip install pyinstaller
+pyinstaller --noconfirm --onefile --windowed --name itpark-scoring --add-data "src/itpark_scoring/assets;itpark_scoring/assets" src/itpark_scoring/app.py
+```
+
+## Configuration
+- Enter your API key in the UI. The key is required, held in memory only, and cleared when the app exits.
+
+## Data and compliance
+- The collector respects robots.txt where possible. If a site disallows crawling, it is skipped.
+- Always review each target site's Terms of Service.
+
+## Notes
+- The rubric is intentionally broad and includes objective criteria with confidence and coverage.

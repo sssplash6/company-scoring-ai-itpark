@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "itpark-scoring"
+version = "0.1.0"
+description = "IT Park company scoring tool (hybrid, local app)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary"}
+dependencies = [
+  "PySide6>=6.6",
+  "requests>=2.31",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.1",
+  "openpyxl>=3.1",
+  "fpdf2>=2.7",
+  "openai>=1.40",
+]
+
+[project.scripts]
+itpark-scoring = "itpark_scoring.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

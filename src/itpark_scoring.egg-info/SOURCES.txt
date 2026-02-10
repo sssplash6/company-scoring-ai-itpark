@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/itpark_scoring/__init__.py
+src/itpark_scoring/app.py
+src/itpark_scoring/collector.py
+src/itpark_scoring/llm.py
+src/itpark_scoring/models.py
+src/itpark_scoring/reports.py
+src/itpark_scoring/storage.py
+src/itpark_scoring/utils.py
+src/itpark_scoring.egg-info/PKG-INFO
+src/itpark_scoring.egg-info/SOURCES.txt
+src/itpark_scoring.egg-info/dependency_links.txt
+src/itpark_scoring.egg-info/entry_points.txt
+src/itpark_scoring.egg-info/requires.txt
+src/itpark_scoring.egg-info/top_level.txt

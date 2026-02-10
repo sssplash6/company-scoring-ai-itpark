@@ -1,0 +1,2 @@
+[console_scripts]
+itpark-scoring = itpark_scoring.app:main
