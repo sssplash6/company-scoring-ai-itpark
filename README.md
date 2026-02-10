@@ -16,24 +16,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [About](#-about)
-- [Origin Story](#-origin-story)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Configuration](#-configuration)
-- [Data Collection & Compliance](#-data-collection--compliance)
-- [Export Formats](#-export-formats)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Support](#-support)
-
----
-
 ## 🎯 About
 
 **IT Park Company Scoring** is a desktop application that transforms subjective vendor screening into a consistent, evidence-based evaluation process. By leveraging AI and public web data, it provides comprehensive company scorecards to support informed business decisions.
